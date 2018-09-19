@@ -1,9 +1,20 @@
 // @flow
 
-module.exports = (input: string, opts: { postfix: ?string } = {}) => {
-  if (typeof input !== 'string') {
-    throw new TypeError(`Expected a string, got ${typeof input}`)
-  }
+import inquirer from 'inquirer'
 
-  return `${input} & ${opts.postfix || 'rainbows'}`
+const main = async () => {
+  const questions = [
+    {
+      type: 'checkbox',
+      name: 'print items',
+      message: 'choose what you want to print',
+      choices: [{ name: 'os' }, { name: 'chrome' }],
+    },
+  ]
+  const answers = await inquirer.prompt(questions)
+}
+
+module.exports = () => {
+  main()
+  return 'ok'
 }

@@ -17,4 +17,4 @@ const cli = meow(`
 	  ponies & rainbows
 `)
 
-console.log(versionPrint(cli.input[0] || 'unicorns'))
+console.log(versionPrint())

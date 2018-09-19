@@ -8,9 +8,10 @@
   "author": "elzup <guild0105@gmail.com> (elzup.com)",
   "bin": "dist/cli.js",
   "engines": {
-    "node": ">=6"
+    "node": ">=8"
   },
   "scripts": {
+    "cli": "babel-node src/cli.js",
     "build": "babel src --out-dir dist && npm run prepack:flow",
     "deploy": "npm run build && yarn publish",
     "prepack:flow": "flow-copy-source src dist",
@@ -39,6 +40,7 @@
   ],
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.54",
+    "@babel/node": "^7.0.0-beta.54",
     "@babel/core": "^7.0.0-beta.54",
     "@babel/plugin-proposal-class-properties": "^7.0.0-beta.54",
     "@babel/preset-env": "^7.0.0-beta.54",
@@ -56,6 +58,7 @@
     "prettier": "^1.14.2"
   },
   "dependencies": {
+    "inquirer": "^6.2.0",
     "meow": "^3.7.0"
   }
 }
