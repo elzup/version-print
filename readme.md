@@ -4,7 +4,10 @@
 [![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
-> make software versions text for report
+> make software versions text for bug reporting
+
+![](https://raw.githubusercontent.com/elzup/version-print/master/screenshot.gif)
+
 
 ## CLI
 
