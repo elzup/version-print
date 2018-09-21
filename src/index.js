@@ -1,8 +1,10 @@
 // @flow
 
-import inquirer from 'inquirer'
-import { execSync } from 'child_process'
 import os from 'os'
+import { execSync } from 'child_process'
+
+import inquirer from 'inquirer'
+import chalk from 'chalk'
 
 type Profile = {
   name: string,
@@ -13,6 +15,22 @@ const choices: Profile[] = [
   {
     name: 'OS',
     shell: 'system_profiler SPSoftwareDataType |grep Version |sed "s/^ *//"',
+  },
+  {
+    name: 'shell',
+    shell: '$SHELL --version',
+  },
+  {
+    name: 'node',
+    shell: 'node --version',
+  },
+  {
+    name: 'npm',
+    shell: 'npm --version',
+  },
+  {
+    name: 'yarn',
+    shell: 'yarn --version',
   },
   {
     name: 'GoogleChrome',
@@ -42,7 +60,7 @@ const main = async () => {
   const selects: Profile[] = answers.items.map(v => choicesLib[v])
   selects.forEach(v => {
     console.log(v.name)
-    console.log(`$ ${v.shell}`)
+    console.log(chalk.gray(`$ ${v.shell}`))
     console.log(execSync(v.shell).toString())
   })
 }
