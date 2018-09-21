@@ -36,7 +36,9 @@
   "keywords": [
     "cli-app",
     "cli",
-    ""
+    "version",
+    "report",
+    "issue"
   ],
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.54",
