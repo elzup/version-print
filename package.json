@@ -1,6 +1,6 @@
 {
   "name": "version-print",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "make software versions text for report",
   "license": "MIT",
   "main": "dist/index.js",
