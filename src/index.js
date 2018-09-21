@@ -27,6 +27,9 @@ const choicesLib: { [key: string]: Profile } = choices.reduce(
 )
 
 const main = async () => {
+  if (os.platform() !== 'darwin') {
+    throw new Error('No support platform. only Mac OS')
+  }
   const questions = [
     {
       type: 'checkbox',

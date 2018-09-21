@@ -1,7 +1,6 @@
 #!/usr/bin/env node
-'use strict'
-const meow = require('meow')
-const versionPrint = require('.')
+import meow from 'meow'
+import versionPrint from '.'
 
 const cli = meow(`
 	Usage
