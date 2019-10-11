@@ -1,17 +1,10 @@
-// @flow
+const os = require('os')
+const { execSync } = require('child_process')
 
-import os from 'os'
-import { execSync } from 'child_process'
+const inquirer = require('inquirer')
+const chalk = require('chalk')
 
-import inquirer from 'inquirer'
-import chalk from 'chalk'
-
-type Profile = {
-  name: string,
-  shell: string,
-}
-
-const choices: Profile[] = [
+const choices = [
   {
     name: 'OS',
     shell: 'system_profiler SPSoftwareDataType |grep Version |sed "s/^ *//"',
@@ -39,10 +32,7 @@ const choices: Profile[] = [
   },
 ]
 
-const choicesLib: { [key: string]: Profile } = choices.reduce(
-  (p, c) => ({ ...p, [c.name]: c }),
-  {}
-)
+const choicesLib = choices.reduce((p, c) => ({ ...p, [c.name]: c }), {})
 
 const main = async () => {
   if (os.platform() !== 'darwin') {
@@ -57,7 +47,8 @@ const main = async () => {
     },
   ]
   const answers = await inquirer.prompt(questions)
-  const selects: Profile[] = answers.items.map(v => choicesLib[v])
+  const selects = answers.items.map(v => choicesLib[v])
+
   selects.forEach(v => {
     console.log(v.name)
     console.log(chalk.gray(`$ ${v.shell}`))
@@ -65,4 +56,4 @@ const main = async () => {
   })
 }
 
-export default main
+module.exports = main

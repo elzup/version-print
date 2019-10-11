@@ -1,5 +1,5 @@
 {
-  "extends": ["precure/oss"],
+  "extends": ["nzap", "nzap/jest"],
   "rules": {
     "no-console": "off"
   }

@@ -1,19 +1,23 @@
-// @flow
-import cp from 'child_process'
-import inquirer from 'inquirer'
-import m from '.'
+const cp = require('child_process')
+const inquirer = require('inquirer')
+const m = require('.')
 
 jest.mock('inquirer')
 jest.mock('child_process')
 
 const spyLog = jest.spyOn(console, 'log')
+
 spyLog.mockImplementation(x => x)
 
-cp.execSync = jest.fn().mockReturnValue(`stdout`)
+jest
+  .spyOn(cp, 'execSync')
+  .mockImplementation()
+  .mockReturnValue(`stdout`)
 
 test('snapshot', async () => {
-  inquirer.prompt = jest
-    .fn()
+  jest
+    .spyOn(inquirer, 'prompt')
+    .mockImplementation()
     .mockResolvedValue({ items: ['OS', 'GoogleChrome'] })
   await m()
   expect(spyLog.mock.calls).toMatchInlineSnapshot(`
@@ -38,6 +42,4 @@ Array [
   ],
 ]
 `)
-
-  // expect(m('unicorn')).toMatchSnapshot()
 })
