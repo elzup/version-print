@@ -2,14 +2,8 @@ language: node_js
 node_js:
   - '10'
 
-cache:
-  yarn: true
-  directories:
-    - '.eslintcache'
-    - 'node_modules'
-
 notifications:
   email: false
 
 script:
-  - yarn run test:ci
+  - yarn run test
