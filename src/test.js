@@ -1,7 +1,6 @@
 // @flow
-
-import inquirer from 'inquirer'
 import cp from 'child_process'
+import inquirer from 'inquirer'
 import m from '.'
 
 jest.mock('inquirer')
