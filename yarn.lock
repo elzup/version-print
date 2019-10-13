@@ -1433,7 +1433,7 @@ eslint-ast-utils@^1.1.0:
     lodash.get "^4.4.2"
     lodash.zip "^4.2.0"
 
-eslint-config-nzap@^1.2.3:
+eslint-config-nzap@1.2.3:
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/eslint-config-nzap/-/eslint-config-nzap-1.2.3.tgz#8b2d3dfec47d8e919f37fd77e344cc489b31529c"
   integrity sha512-88SgKFSgYwlEaGTGCiI8RpYJttzeX3Tya60Xfm5eET5xWA9FediA88m8dm7/Jbe0XCJR2G64BiuYV5I1fQJ3Sg==
