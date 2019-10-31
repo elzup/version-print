@@ -35,9 +35,9 @@
     "issue"
   ],
   "devDependencies": {
-    "all-contributors-cli": "6.9.1",
-    "eslint": "6.5.1",
-    "eslint-config-nzap": "1.2.4",
+    "all-contributors-cli": "6.9.3",
+    "eslint": "6.6.0",
+    "eslint-config-nzap": "1.2.5",
     "eslint-config-precure": "5.1.0",
     "husky": "3.0.9",
     "jest": "24.9.0",
