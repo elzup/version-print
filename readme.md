@@ -1,3 +1,5 @@
+_Note: this package has been closed. I recommend upward compatible great cli > [tabrindle/envinfo](https://github.com/tabrindle/envinfo) <_
+
 # version-print
 
 [![Build Status](https://travis-ci.org/elzup/version-print.svg?branch=master)](https://travis-ci.org/elzup/version-print)
@@ -7,7 +9,6 @@
 > make software versions text for bug reporting
 
 ![](https://raw.githubusercontent.com/elzup/version-print/master/screenshot.gif)
-
 
 ## CLI
 
